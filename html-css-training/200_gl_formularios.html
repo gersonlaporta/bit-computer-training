@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+        
+            label {
+                width: 200px;
+                display: inline-block;
+            }
+        
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+            <form action="#" method="get">
+            <label>Nombre y apellidos</label>
+                <input type="text" name="nombre">
+                <input type="text" name="apellidos">
+                <hr>
+                <input type="submit" name="enviar" value="Enviar formulario (input)">
+                <button name="enviar">Enviar formulario (button)</button>
+                <hr>
+            <label>Password</label>
+                <input type="password" name="pass" >
+                <hr>
+                <label>hidden (name oculto)</label>
+                <input type="hidden" name="oculto" value="123456">
+                <hr>
+            <label>Esto es un checkbox</label>
+                <br>
+                <input type="checkbox" name="check" value="pintura">
+                <span>Pintura</span>
+                <br>
+                <input type="checkbox" name="check" value="llantas">
+                <span>llantas</span>
+                <br>
+                <input type="checkbox" name="check" value="gps">
+                <span>gps</span>
+                <hr>
+                <input type="checkbox" name="check" value="pintura" checked>
+                <span>Acepto política de privacidad</span>
+                <hr>
+            <label>¿Tienes estudios superiores?</label>
+                <br>
+                <input type="radio" name="radio" value="si">
+            <label>Sí</label>
+                <br>
+                <input type="radio" name="radio" value="no">
+                <span>No</span>
+                <hr>
+            <label>Hombre/Mujer</label>
+                <br>
+                <input type="radio" name="radio" value="hombre" checked>
+            <label>Hombre</label>
+                <br>
+                <input type="radio" name="radio" value="mujer">
+                <span>Mujer</span>
+                <hr>
+            <label>Adjunta tu foto</label>
+                <br>
+                <input type="file" name="fichero">
+                <hr>
+            <label for="correo">Escribe tu email:</label>
+                <input id="correo" type="email" name="email">
+                <hr>
+            <label for="tel" >Teléfono:</label>
+                <input type="tel" name="telefono">
+                <hr>
+            <label for="color">Elige un color:</label>
+                <input id="color" type="color" name="color">
+                <hr>
+            <label for="años">¿Cuántos años tienes?</label>
+                <input id="años" type="number" min="18" max="120" step="xx" name="numero">
+                <hr>
+            <label>¿Año de nacimiento?</label>
+                <input type="number" min="1950" max="2001" step="xx" name="numero">
+                <hr>
+            <label>¿Porcentaje satisfacción?</label>
+                <input type="range" name="range">
+                <hr>
+            <label>¿Fecha de nacimiento?</label>
+            <input type="date" name="fecha">
+                <hr>
+            <label for="busca">Buscador:</label>
+                <input id="busca" type="search" name="buscar">
+                <hr>
+                <input type="button" name="enviar" value="Enviar">
+                <input type="reset" name="limpiar" value="Borrar todo">
+                <hr>
+                <input type="image" name="on" src="img/on.png">
+                <input type="image" name="on" src="img/off.png">
+                <hr>
+            <label>Mensaje</label>
+                <textarea cols="20" rows="5" maxlength="500">Escribe aquí:</textarea>
+                
+            </form>
+            
+
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

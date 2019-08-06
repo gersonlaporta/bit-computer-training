@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>Ejercicio recopilatorio I</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+            
+            div {
+                font-family: arial;
+                width: 600px;
+                border: 1px solid black;
+                margin: auto;
+            }
+
+            header, section {
+                padding: 10px;
+                overflow: hidden;
+                box-sizing:border-box;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                color: blue;
+			    text-decoration: none;
+			    cursor: pointer;
+			    border: 2px solid black;
+                height: 30px;
+                width: 100px;
+			    line-height: 31px;
+			    background-color: grey;
+			    display: inline-block;
+                transition: 2s;
+            }
+
+            a:hover {
+                background-color: yellow;
+                transition: 2s;
+
+            }
+
+            img {
+                float: left;
+                size: 50%;
+                margin-right: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .seccion1 {
+                width: 600px;
+                background-color: antiquewhite;
+                text-align: justify;
+                overflow: hidden;
+            }
+
+            .seccion2 {
+                width: 600px;
+                background-image: url("img/099_fondo.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-align: center;
+                overflow: hidden;
+            }
+
+            .seccion3 {
+                width: 600px;
+                background-color: floralwhite;
+                text-align: center;
+                overflow: hidden;
+                text-align: left;
+            }
+
+            .seccion4 {
+                width: 600px;
+                background-color: khaki;
+                text-align: center;
+                overflow: hidden;
+            }
+
+            .img1 {
+                float: left;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .clear {
+                clear: left;
+            }
+
+            ul {
+			list-style-image:url("img/gorro_cocina.png");
+			display: table;
+			margin: auto;
+            text-align: left;
+		    }
+
+            ol {
+			list-style: decimal;
+            font-size: 12px;
+		    }
+        
+            .colorAzul {
+                color: blue;
+            }
+
+            .alto30 {
+                line-height: 30px;
+            }
+
+            .colorRojo {
+                color: red;
+            }
+
+            code {
+                font-family: none;
+            }
+
+            td, th {
+                border: 2px solid blue;
+                width: 50px;
+                height: 30px;
+                padding: 5px;
+            }
+
+            table {
+                margin: auto;
+            }
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div>
+        <header>
+                <nav>
+                <a href="#seccion1">SECCIÓN 1</a>
+                <a href="#seccion2">SECCIÓN 2</a>
+                <a href="#seccion3">SECCIÓN 3</a>
+                <a href="#seccion4">SECCIÓN 4</a>
+                </nav>
+        </header>
+
+        <section class="seccion1">
+                <h2 id="seccion1">SECCIÓN 1: imagen y texto alrededor</h2>
+                <img class="img1" src="img/img1.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores possimus accusamus fugiat, voluptate earum excepturi. Optio tenetur vel sint, quis eius assumenda repellat veritatis aliquam.Aliquam necessitatibus delectus voluptatibus odit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione saepe magnam amet tempora rerum? </p>
+                <p class="clear"></p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores possimus accusamus fugiat, voluptate earum excepturi. Optio tenetur vel sint, quis eius assumenda repellat veritatis aliquam. </p>
+        </section>
+
+        <section class="seccion2">
+                <h2 id="seccion2">SECCIÓN 2: listas y fondo</h2>
+                <p>En esta seción se visualizará un fondo con una imagen que cubre toda la caja.</p>
+                <p>Todo el contenido aparecerá centrado.</p>
+                <p>Como contenido incluiremos un alista anidada cuyo primer nivel tendrá una imagen pequeña como viñeta y el segundo nivel numeración ascendente.</p>
+                <p>Los elementos de segundo nivel tendrán un tamaño de fuente de 12px.</p>
+            
+            <ul>
+                <li>Elemento 1 lista con imágenes
+                    <ol>
+                        <li>Elemento 1 sublista</li>
+                        <li>Elemento 2 sublista</li>
+                        <li>Elemento 3 sublista</li>
+                    </ol>
+                </li>
+                <li>Elemento 2 lista con imágenes
+                    <ol>
+                        <li>Elemento 1 sublista</li>
+                        <li>Elemento 2 sublista</li>
+                        <li>Elemento 3 sublista</li>
+                    </ol>
+                </li>
+            </ul>
+            <br>
+
+        </section>
+
+        <section class="seccion3">
+                <h2 id="seccion3">SECCIÓN 3: texto con estilos</h2>
+                <p class="colorAzul alto30">Este párrafo tiene un alto de línea de 30px y todo él es de color azul, <span class="colorRojo">excepto esta frase que es de color rojo.</span></p>
+                <p>Este segundo párrafo contiene alguna palabreja en <i>cursiva (como por ejemplo ésta)</i> y alguna que otra en <b>negrita.</b></p>
+                <p>En este tercer párrafo escribiremos una fórmula matemática:a=I<sup>2</sup><br>
+                Y la fórmula del dióxido de carbono: CO<sub>2</sub>.</p>
+                <p>En este párrafo tenemos un <del>texto tachado</del> y un texto <ins>que acabamos de añadir.</ins></p>
+                <p>Y este párrafo es un ejemplo de código: <code>for(f=1;f<=10;f++)</code></p>
+            
+        </section>
+
+        <section class="seccion4">
+                <h2 id="seccion4">SECCIÓN 4: tablas y enlaces externos</h2>
+                <caption><a href="http://ww.google.com" target="_blank">Enlace a google</a></caption>
+                <table>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+                </tr>
+                <tr>
+                    <td colspan="2">1.1</td>
+                    <td rowspan="3">1.3</td>
+                </tr>
+                <tr>
+                    <td>2.1</td>
+                    <td>2.2</td>
+                </tr>
+                <tr>
+                    <td>3.1</td>
+                    <td>3.2</td>
+                </tr>
+                </table>
+        </section>
+
+
+        </div>
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

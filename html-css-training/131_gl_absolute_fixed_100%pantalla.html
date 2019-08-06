@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+        
+           .contenedor {
+               background-color: cyan;
+               width: 100%;
+               height: 400px;
+               position: absolute;
+               
+           }
+        
+           .caja1 {
+               width: 100%;
+               height: 250px;
+               background-color: pink;
+               display: block;
+               position: absolute;
+               top: 40px;
+               left: 50px;
+           }
+
+           h1 {
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+           }
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+            <div class="contenedor">
+                <h1>.</h1>
+                <h1>ABSOLUTE</h1>
+                <div class="caja1">position:absolute <br>width: 100%;<br>height: 250px;<br>display: block;<br>top: 100px;<br>left: 50px;<br>SE PIERDE EL ANCHO 100%</div>
+            </div>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+position: static; relative; fixed; absolut; sticky;
+Para colocar el elemento en un lugar diferente en el que debería estar.
+http://www.w3schools.com/css/css_positioning.asp
+-->

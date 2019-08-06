@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript">
+        
+        window.onload=function() {
+            //activar un listener sobre el div
+            document.getElementById('capa1').addEventListener('click', alerta1)
+            //activar un listener sobre el enlace
+            document.getElementById('capa2').addEventListener('dblclick', alerta2)
+            //activar un listener sobre la lista
+            document.getElementById('capa3').addEventListener('mouseover', alerta3)
+        }
+
+        function alerta1() {
+            alert('se ha ejecutado el evento');
+            //desactivar listener del div
+            document.getElementById('capa1').removeEventListener('click', alerta1)
+        }
+
+        function alerta2() {
+            alert('se ha ejecutado el evento');
+            //desactivar listener del div
+            document.getElementById('capa2').removeEventListener('dblclick', alerta2)
+        }
+
+        function alerta3() {
+            alert('se ha ejecutado el evento');
+            //desactivar listener del div
+            document.getElementById('capa3').removeEventListener('mouseover', alerta3)
+        }
+
+        </script>
+
+        <style>
+
+            div {
+                background-color: yellow;
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                padding: 5px;
+            }
+        
+        </style>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div id="capa1">click</div>
+        <div id="capa2">dblclick</div>
+        <div id="capa3">mouseover</div>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

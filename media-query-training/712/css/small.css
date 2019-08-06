@@ -1,0 +1,62 @@
+/*header {			
+    background: url("../img/fondo_pequenyo.jpg") no-repeat;
+    height: 215px;
+}*/
+
+nav {
+    height: auto;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    margin: 5px 0px;
+}
+
+nav ul {
+    width: 90%;
+    padding: 0px;
+}
+
+nav a {
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+article {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+article img {
+    float: none;
+    width: 100%;
+}
+
+nav a:hover {
+    background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

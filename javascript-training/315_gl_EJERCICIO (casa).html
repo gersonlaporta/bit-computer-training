@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript">
+        
+        function salir1() {
+            var valor = document.getElementById('texto').value
+            alert(valor)
+        }
+
+        function salir2() {
+            var valor = document.getElementById('combo').value
+            alert(valor)
+        }
+
+        function salir3() {
+            var valor = document.getElementById('boton').value
+            alert(valor)
+        }
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <form>
+            
+            <input  type="text" id="texto" onblur='salir1()'>
+
+            <br><br>
+            
+            <select id="combo" onblur='salir2()'>
+                <option>Opción 1</option>
+                <option>Opción 2</option>
+                <option>Opción 3</option>
+            </select>
+
+            <br><br>
+
+            <input type="button" value="enviar" id="boton" onclick="salir3()">
+
+        </form>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+        <script type="text/javascript">
+
+            //inicializar variable contador de segundos
+
+            $(inicio)
+
+            //activar los listeners de los botones
+            function temp() {
+                $('#activar').on('click', activar)
+                $('#parar').on('click', parar)
+            }
+
+            //función para activar el cronometro
+            function activar() {
+                temporizador = setInterval(contar, 1000)
+
+                //deshabilitar el botón
+                $('#activar').prop('disabled', true)
+
+                //desactivar el evento
+                //$('#activar').off('click')
+            }
+
+            //función para detener el cronometro
+            function contar() {
+                //sumar 1 al contador
+                contador++
+                //enviar el contador a la etiqueta h1
+                $('h1').text(contador)
+            }
+
+            //función para detener el cronometro (clearInterval)
+            function parar() {
+                clearInterval(temporizador)
+
+                //habilitar el botón
+                $('activar').prop('disabled', false)
+
+            }
+
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <input type="button" id='activar' value='activar'>
+        <input type="button" id='parar' value='parar'>
+        <br>
+        <h1>0</h1>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

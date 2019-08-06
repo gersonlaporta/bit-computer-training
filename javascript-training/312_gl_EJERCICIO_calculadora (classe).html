@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript">
+        
+        function calcular() {
+
+            //recuperar numerador y denominador
+            var numerador = parseFloat(document.getElementById('num1').value)
+            var denominador = parseFloat(document.getElementById('num2').value)
+            var operacion = document.getElementById('oper').value
+
+            //(opción1) validar que estén informados
+            /*if (isNaN(numerador) || numerador==" ") {
+                alert ('¡numerador no válido!');
+                return;
+            }*/
+
+            //(opción2) validar
+            var inputNum = document.getElementById('num1')
+            if (!inputNum.checkValidity()) {
+                alert(inputNum.validationMessage)
+                document.getElementById('num1').style.border='1px solid red'
+                return;
+            } else {
+                document.getElementById('num1').style.border=''
+            }
+
+                var inputDen = document.getElementById('num2')
+            if (!inputDen.checkValidity()) {
+                alert(inputDen.validationMessage)
+                return;
+            }
+
+                var inputOper = document.getElementById('oper')
+            if (!inputOper.checkValidity()) {
+                alert(inputOper.validationMessage)
+                return;
+            }
+
+            if (operacion=='0') {
+                alert("Selecciona una operación de la lista")
+                return;
+            }
+
+            //recuperar operación
+            var operacion = document.getElementById('oper').value
+
+            //realizar el cálculo
+            var resultado = eval(numerador+operacion+denominador)
+
+            //enviar el resultado al formulario
+            document.getElementById('resultado').value = resultado
+        }
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <form>
+            <input  type="number" id="num1" required>
+
+            <select id="oper" required>
+                <option disabled selected value=='0'>Operacion</option>
+                <option>+</option>
+                <option value='*'>X</option>
+                <option>/</option>
+            </select>
+
+            <input  type="number" id="num2" required>
+
+            <span>=</span>
+
+            <input disabled type="number" id="resultado">
+
+            <br>
+            <br>
+            
+            <input type="button" value="calcular" onclick="calcular()">
+
+        </form>    
+
+        
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

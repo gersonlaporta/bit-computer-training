@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>Page Title</title>
+   <script type="text/javascript">
+        //POsar etiquetes table
+        document.write('<table border="2px solid black" display="inline-block" >')
+        //bucle de 10 iteraciones
+        for (i = 1; i <= 10; i++) {
+            //inici de fila
+            document.write('<tr>')
+            for (j = 1; j <= 10; j++) {
+                // calcular la multiplicio
+                var m = i*j;
+                // imprimir operacio 
+                document.write('<td>' + j  + ' x ' + i + ' = ' + m + '</td>');
+            }
+
+            document.write( '</tr>');
+        }
+        document.write( '</table>');
+
+   </script>
+</head>
+<body>
+
+</body>
+</html>

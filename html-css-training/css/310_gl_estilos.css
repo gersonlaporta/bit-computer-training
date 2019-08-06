@@ -1,0 +1,156 @@
+
+            * {
+                font-family: arial;
+                box-sizing: border-box;
+            }
+
+            .contenedor {
+                max-width: 1600px;
+                margin: auto;
+            }
+            
+            .cabecera {
+                background-color: blanchedalmond;
+                background-image: url("../img/punta_cana_1.jpg");
+                background-repeat: no-repeat;
+                height: 600px;
+                background-position: center;
+                background-size: cover;
+
+                /*centrar ttíulo*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                /*centrar barra navegación*/
+                position: relative;
+            }
+            
+            h2 {
+                color: white;
+                font-size: 50px;
+                position: absolute;
+                left: 350px;
+                bottom: 225px;
+                /*margin: 0px;*/
+            }
+
+            nav {
+                background-color: rgba(0, 47, 255, 0.39);
+                height: 80px;
+                /*posicionar la barra en la aprt einferior del header*/
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                /*indicar  expresamente que la caja mantenga el 100% del ancho de la caja contenedora*/
+                width: 100%;
+
+                /*centrar opciones de navegación*/
+                text-align: center;
+            }
+
+            nav li {
+                /*width: 185px;*/
+                display: inline-block;
+                list-style-type: none;
+            }
+
+            nav ul {
+                /*eliminar el margen superior y izquierdo que tiene por defecto la etiqueta ul*/
+                margin:0px;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                /*cambiar display para que acepte el ancho*/
+                font-size: 30px;
+                width: 185px;
+                /*dispone los links en forma alineación bloque*/
+                display: inline-block;
+                /*centra verticalmente*/
+                line-height: 80px;
+            }
+
+            a:hover {
+                background-color: rgba(243, 252, 252, 0.3);
+                
+            }
+
+            .section1 {
+                padding: 25px;
+                overflow: hidden;
+                font-size: 18px;
+            }
+
+            .section2 {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .section3 {
+
+            }
+
+            .imagenpdf {
+			float: left;
+			margin-right: 20px;
+            }
+
+            article {
+                background-color: antiquewhite;
+                display: inline-block;
+                width: 25%;
+                min-width: 250px;
+                text-align: justify;
+                margin: auto 10px;
+                font-size: 17px;
+            }
+
+            .section3 {
+                background-color: antiquewhite;
+                text-align: center;
+            }
+
+            .section3 div {
+                border: 1px solid blue;
+                height: 450px;
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+                text-align: left;
+                padding: 20px;
+            }
+
+            /*.forms {
+                background-color: gray;
+                height: 450px;
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+            }*/
+
+            /*.map {
+                height: 450px;
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+            }*/
+
+            /*ancho de 350px aplique a todos los input excepto las input submit*/
+            input:not([type='submit']) {
+                width: 250px;
+            }
+
+            label {
+                width: 200px;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            textarea {
+                width: 250px;
+                height: 200px;
+            }
+
+            

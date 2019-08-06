@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript">
+        
+            /* ARRAYS */
+
+            /* Un array es una variable 
+            que contiene un conjunto de valores
+            Hay diferentes opciones para declarar un array */
+
+        //Opción 1
+
+            var cosas1 = new Array();
+
+            cosas1[0] = 9
+            cosas1[1] = 6
+            cosas1[2] = 2
+            cosas1[3] = 16
+            cosas1[4] = 8
+
+            document.write("contenido de 1 es "+cosas1[0]+"<br> contenido de 2 es "+cosas1[1]+"<br> contenido de 3 es "+cosas1[2]);
+            
+        //Opción 2
+
+            var cosas2 = new Array(9, 6, 2, 16, 8)
+            // o sin espacios: var cosas2 = new Array(9,6,2,16,8)
+
+        //Opción 3 -texto-
+
+            var dias1 = new Array('lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo')
+
+            document.write("<hr> contenido "+dias1[2])
+
+            //otra opción ():
+
+            var dias2  = ['lunes','martes','miércoles','jueves','viernes','sábado','domingo']
+
+            document.write("<br> contenido "+dias2[4])
+
+        //Opción 4 -mixtos-
+
+            var mixto1 = new Array(3,'blablabla',5,'blebleble',7,9,10)
+
+            document.write("<hr> contenido "+mixto1[3])
+
+            var mixto2 = [3,'texto1',5,'texto2',7,9,10]
+
+            document.write("<br> contenido "+mixto2[4])
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+            <p>Ejemplo de texto</p>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

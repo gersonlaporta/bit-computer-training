@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flatdesign</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.contenedor {
+			/*evitar la espaguetización*/
+			max-width: 1600px;
+			margin: auto;
+		}
+		header {
+			height: 600px;
+			background-image: url('img/punta_cana_1.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			font-size: 50px;
+			font-family: arial;
+			color:white;
+
+			/*centrar el título*/
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			/*posicionar la barra de navegación */
+			position: relative;
+		}
+		
+		nav {
+			height: 80px;
+			background-color: blue;
+
+			/*posicionar la barra en la parte inferior del header*/
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+
+			/*indicar expresamente que la caja mantenga el 100% del ancho de la caja contenedora*/
+			width: 100%;
+
+			/*caja semitransparente*/
+			opacity: 0.5;
+
+			/*centrar las opciones de navegación*/
+			text-align: center;
+		}
+
+		nav li {
+			/*forzar que las opciones de navegación aparezcan unas al lado de las otras*/
+			display: inline-block;
+
+			list-style-type: none;
+		}
+
+		nav ul {
+			/*eliminar el margen superior y izquierdo que tiene por defecto la etiqueta ul*/
+			margin: 0px;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+
+			/*cambiar el display para que acepte el ancho*/
+			width: 320px;
+			display: inline-block;
+
+			/*centrado vertical de los textos*/
+			line-height: 80px;
+		}
+
+		nav a:hover {
+			background-color: red;
+		}
+
+		#seccion2 {
+			/*centrar las cajas con inline-block*/
+			text-align: center;
+
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		article {
+			width: 30%;
+			min-width: 250px;
+			display: inline-block;
+			vertical-align: top;
+			text-align: justify;
+
+			/*margen para separar las cajas unas de otras*/
+			margin: auto 10px;
+		}
+
+		article img {
+			width: 100%;
+		}
+
+		#seccion3 {
+			/*centrar las cajas*/
+			text-align: center;
+		}
+
+		#seccion3 div {
+			width: 600px;
+			height: 450px;
+			border: 1px solid blue;
+
+			/*cajas una al lado de la otra y alineadas por el borde superior*/
+			display: inline-block;
+			vertical-align: top;
+
+			/*margen interior que no redimensiona la caja*/
+			padding: 20px;
+			box-sizing: border-box;
+
+			/*sobreescribir el estilo de alineación de texto*/
+			text-align: left;
+		}
+
+		label {
+			width: 150px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		/*el ancho de 350 aplica a todas las etiquetas input excepto la que sea de tipo submit*/
+		input:not([type='submit']) {
+			width: 350px;
+		}
+
+		textarea {
+			width: 350px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class='contenedor'>
+		<header>
+			<h1>PUNTA CANA</h1>
+			<nav>
+				<ul>
+					<li><a href="#inicio">INICIO</a></li>
+					<li><a href="#seccion1">SECCION 1</a></li>
+					<li><a href="#seccion2">SECCION 2</a></li>
+					<li><a href="#seccion3">SECCION 3</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id='seccion2'>
+			<h1>SECCIÓN 2</h1>
+			<article>
+				<img src="img/punta_cana_2.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article>
+				<img src="img/punta_cana_3.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+			<article>
+				<img src="img/punta_cana_4.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+		</section>
+		<section id='seccion3'>
+			<h1>SECCIÓN 3</h1>
+			<div id='formulario'>
+				<form method='post' action='#'>
+					<label>Nombre y apellidos</label>
+					<input type="text" name="nombre" required>
+					<br><br>
+					<label>correo</label>
+					<input type="email" name="correo" required>
+					<br><br>
+					<label>Teléfono</label>
+					<input type="tel" name="telefono">
+					<br><br>
+					<label>Mensaje</label>
+					<textarea required name='mensaje'></textarea>
+					<br><br>
+					<input type="submit" name="enviar">
+				</form>
+			</div>
+			<div id='mapa'>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241952.79056598968!2d-68.61143003119587!3d18.64099096654774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea891645dcbfe77%3A0x61881cfaed12f6f3!2sPunta+Cana%2C+Rep%C3%BAblica+Dominicana!5e0!3m2!1ses!2ses!4v1547807293215" width="560" height="410" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

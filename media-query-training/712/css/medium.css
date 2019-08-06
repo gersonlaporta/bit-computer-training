@@ -1,0 +1,12 @@
+/*header {			
+    background: url("../img/fondo_medio.jpg") no-repeat;
+    height: 340px;
+}*/
+
+article {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+

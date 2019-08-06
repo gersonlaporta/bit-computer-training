@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+        
+            body {
+                background-color: grey;
+            }
+
+            .contenedor {
+                background-color: white;
+                margin: auto;
+                height: 720px;
+                width: 960px;
+            }
+
+            header {
+                height: 75px;
+                width: 960px;
+                position: relative;
+            }
+
+            .section1 {
+                background-color: pink;
+                height: 280px;
+                width: 960px;
+            }
+
+            .section2 {
+                height: 280px;
+                width: 960px;
+                overflow: hidden;
+                /*display: flex;
+                justify-content: center;
+                align-items: center;*/
+                /*padding-top: 25px;*/
+                
+            }
+
+            footer {
+                height: 90px;
+                width: 960px;
+                padding: 5px;
+                position: relative;
+            }
+
+            .articulos {
+                height: 230px;
+                width: 900px;
+                margin: 25px auto;
+                vertical-align: top;
+                font-family: arial;
+                font-size: 1em;
+            }
+
+            article {
+                display: inline-block;
+                height: 230px;
+                width: 265px;
+                margin: auto 16px;
+                vertical-align: top;
+                text-align: justify;
+            }
+
+            nav {
+                height: 30px;
+                width: 240px;
+                /*float: right;
+                margin-top: 40px;*/
+                position: absolute;
+                right: 0px;
+                bottom: 5px;
+                
+            }
+
+            nav a {
+                /*float: right;
+                margin-top: 40px;*/
+                margin-left: 15px;
+                font-family: arial; 
+                font-size: 0.8em; 
+                text-decoration: none; 
+                line-height: 30px;
+                color: rgb(73, 8, 8);
+            }
+
+            footer nav {
+                top: 5px;
+            }
+
+            nav a:hover {
+                color: rgb(177, 74, 74);
+            }
+
+            article h2 {
+                margin: 0px;
+                text-align: left;
+            }
+
+            #enlace {
+                text-decoration: none;
+                font-family: arial;
+                font-size: 0.8em;
+                color: rgb(73, 8, 8);
+                position: relative;
+                left: 5px;
+                top: 5px;;
+            }
+
+            #enlace:hover {
+                color: rgb(177, 74, 74);
+            }
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div class="contenedor">
+            <header>
+                <img src="img/vuit.png">
+                <nav>
+                    <a href="#">Inici</a>
+                    <a href="#">Video</a>
+                    <a href="#">Albums</a>
+                    <a href="#">Contacte</a>
+                </nav>
+            </header>
+            <section class="section1">
+                <img src="img/imatge_slider1.png">
+            </section>
+            <section class="section2">
+                <div class="articulos">
+                    <article>
+                        <h2>Artículo 1</h2>
+                        <img src="img/pantalles_vuit_app.png">
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempore autem ipsum possimus molestiae adipisci odio cupiditate nam animi! Beatae ipsum fugiat quasi nulla.</span>
+                    </article>
+                    <article>
+                        <h2>Artículo 2</h2>
+                        <img src="img/pantalles_vuit_app.png">
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempore autem ipsum possimus molestiae adipisci odio cupiditate nam animi! Beatae ipsum fugiat quasi nulla.</span>
+                    </article>
+                    <article>
+                        <h2>Artículo 3</h2>
+                        <img src="img/pantalles_vuit_app.png">
+                        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempore autem ipsum possimus molestiae adipisci odio cupiditate nam animi! Beatae ipsum fugiat quasi nulla.</span>
+                    </article>
+                </div>
+            </section>
+            <footer>
+                <a id="enlace" href="#">Cibernarium.cat</a>
+                <nav>
+                    <a href="#">Inici</a>
+                    <a href="#">Video</a>
+                    <a href="#">Albums</a>
+                    <a href="#">Contacte</a>
+                </nav>
+            </footer>
+        </div>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

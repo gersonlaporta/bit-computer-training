@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Ejercicios</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		form {width: 300px;background-color: #D3D3D3;margin:auto;padding:20px;}
+	</style>
+	<script>
+		var nombres = new Array;
+
+		function enviaFormulario(){
+			var nombre = document.getElementById('nombre').value;
+			posicio = nombres.indexOf(nom);	
+			if (posicio >= 0){
+				alert('Nombre ya introducido');
+			} else {
+				nombres.push(nombre);
+				alert('Alta efectuada correctamente: ' + nombres);
+			}
+		
+		}
+	</script>
+</head>
+<body>
+<div id="container">
+	<form>
+		<label>Nombre y apellidos</label>
+		<input type="text" id="nombre">
+		<br><br>
+		<input type="button" id="enviar" value='Enviar' onclick='enviaFormulario()''>
+	</form>
+</div>
+</body>
+</html>

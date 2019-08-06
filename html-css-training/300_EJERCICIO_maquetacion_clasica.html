@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>maquetación</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body {
+			background-color: grey;
+			font-family: arial;
+		}
+
+		.contenedor {
+			width: 960px;
+			height: 720px;
+			margin: auto;
+			background-color: white;
+		}
+
+		header {
+			height: 75px;
+			position: relative;
+		}
+
+		#seccion1 {
+			height: 280px;
+		}
+
+		#seccion2 {
+			height: 280px;
+			text-align:  center;
+			/*opcion 3*/
+			/*padding-top: 25px;
+			box-sizing: border-box;*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		footer {
+			height: 90px;
+			padding: 5px;
+			box-sizing: border-box;
+			position: relative;
+		}
+
+		article {
+			width: 265px;
+			height: 230px;
+			display: inline-block;
+			margin: auto 10px;
+			text-align: justify;
+			/*opcion 1*/
+			/*margin-top: 25px;*/
+			/*opcion 2*/
+			/*position: relative;
+			top:25px;*/
+		}
+
+		nav {
+			width: 300px;
+			height: 30px;
+			position: absolute;
+			right: 0px;
+			bottom: 5px;
+		}
+
+		nav a {
+			font-family: arial;
+			font-size: 0.8em;
+			text-decoration: none;
+			line-height: 30px;
+			margin-left: 15px; 
+		}
+
+		nav a:hover {
+			color:red;
+		}
+
+		article h2 {
+			margin:0px;
+			text-align: left;
+		}
+
+		footer nav {
+			top:5px;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+	</style>
+</head>
+<body>
+	<div class='contenedor'>
+		<header>
+			<img src="img/vuit.png">
+			<nav>
+				<a href="#">Inici</a>
+				<a href="#">Videos</a>
+				<a href="#">Albums</a>
+				<a href="#">Contacte</a>
+			</nav>
+		</header>
+		<section id='seccion1'>
+			<img src="img/imatge_slider1.png">
+		</section>
+		<section id='seccion2'>
+			<article>
+				<h2>Artículo 1</h2>
+				<img src="img/pantalles_vuit_app.png">
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi</span>
+			</article>
+			<article>
+				<h2>Artículo 2</h2>
+				<img src="img/pantalles_vuit_app.png">
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi</span>
+			</article>
+			<article>
+				<h2>Artículo 3</h2>
+				<img src="img/pantalles_vuit_app.png">
+				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi</span>
+			</article>
+		</section>
+		<footer>
+			<a href="#">Cibernarium.cat | Cibernarium.cat</a>
+			<nav>
+				<a href="#">Inici</a>
+				<a href="#">Videos</a>
+				<a href="#">Albums</a>
+				<a href="#">Contacte</a>
+			</nav>
+		</footer>
+	</div>
+</body>
+</html>

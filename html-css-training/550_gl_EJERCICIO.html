@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="css/310_gl_estilos.css">
+        -->
+
+<!-- Principio del CSS -->
+        <style type="text/css">
+        
+            .amarillo {
+                background-color: yellow;
+                height: 200px;
+                width: 200px;
+                position: relative;
+            }
+
+            .verde {
+                background-color: green;
+                height: 200px;
+                width: 200px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                transition:3s;
+            }
+
+            .verde:hover {
+                left: 200px;
+                transition:3s;
+            }
+
+        
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div class="amarillo">
+            <h5>ESTE TEXTO ESTA OCULTO</h5>
+            <div class="verde"></div>
+        </div>
+            
+        </div>
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+div:hover {}
+Ejercicio de juego con :hover position:absolute y relative.
+-->

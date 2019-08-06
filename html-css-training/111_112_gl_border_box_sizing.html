@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="css/310_gl_estilos.css">
+        -->
+
+<!-- Principio del CSS -->
+        <style type="text/css">
+        
+            #contenedor {
+                border: 2px solid blue;
+                width: 300px;
+                box-sizing: border-box;
+            }
+
+            .caja1 {
+                background-color: cyan;
+                display: block;
+                width: 300px;
+                margin: 10px 10px 10px 10px;
+                padding: 10px 10px 10px 10px;
+                border: 9px solid blue;
+            }
+
+            .caja2 {
+                background-color: cyan;
+                display: block;
+                margin: 10px 10px 10px 10px;
+                padding: 10px 10px 10px 10px;
+                border: 9px solid blue;
+                box-sizing: border-box;
+            }
+        
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div id="contenedor">
+            <div class="caja1">Esta caja es display:block con ancho 300px, border 10px, margin 10px y padding 10px dentro de elemento con ancho 300px</div>
+        </div>
+
+        <hr>
+
+        <div id="contenedor">
+            <div class="caja2">Esta caja es display:block con box-sizing: border-box;, border 10px, margin 10px y padding 10px dentro de elemento con ancho 300px</div>
+        </div>
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+box-sizing: border-box;
+Esta propiedad permite evitar el incremento de ancho y alto de la caja cuando se utiliza border o padding de forma que la caja mantiene las dimensiones especificadas en width y heigth y es el contenido de la misma el que se ajusta a estas dimensiones:
+-->

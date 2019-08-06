@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+        
+		ul {
+			list-style-image:url("img/gorro_cocina.png");
+			display:table;
+			margin:auto;
+		}
+
+		ol {
+			list-style: decimal;
+		}
+
+        ol li:nth-child(even) {
+            background:pink
+            }
+		ol li:nth-child(odd) {
+            background:rgb(164, 224, 74)
+            }
+
+        /* ul {list-style: none;} */
+        
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <ul>
+            <li>Ingredientes receta de arroz con leche
+                <ol>
+                    <li>Arroz bomba</li>
+                    <li>Leche</li>
+                    <li>Azúcar</li>
+                    <li>Canela</li>
+                    <li>Rayadura de limón</li>
+                </ol>
+            </li>
+            <li>Ingredientes receta torrijas
+                <ol>
+                    <li>Pan duro en rebanadas</li>
+                    <li>Leche</li>
+                    <li>Azúcar</li>
+                    <li>Aceite oliva</li>
+                </ol>
+            </li>
+        </ul>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+list-style-image:url("img/gorro_cocina.png");
+Aplicamos a <ul> un icono de imagen.
+-->

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="css/310_gl_estilos.css">
+        -->
+
+<!-- Principio del CSS -->
+        <style type="text/css">
+
+            /*display:inline-block*/
+            .caja2 {
+                border: 2px solid blue;
+                display: inline-block;
+                /*width: 453px; Con width453px se pondrá al lado*/
+                width: 454px;
+                /*Con width454px se pondrá debajo*/
+                vertical-align: top;
+            }
+
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+
+        <h1>Si inline-block no cabe se situa una debajo de otra</h1>
+
+        <div class="caja2">caja2 Esta caja es display:inline-block sin salto de linea y su ancho lo determina el contenido o, si lo tiene especificado, el atributo width y height</div>
+        <div class="caja2">Esta caja es display:inline-block sin salto de linea y su ancho lo determina el contenido o, si lo tiene especificado, el atributo width y height</div>
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+display: inline-block;
+Dependerá siempre de su ancho el hecho que no se dispongan una debajo de la otra.
+-->

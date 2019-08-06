@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum- scale=2">
+
+        <!-- <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.js'></script> -->
+
+        <script type="text/javascript" src='js/jquery.js'></script>
+
+        <script type="text/javascript"></script>
+
+        <style type="text/css">
+                
+        .flex-container {
+            width: 50%;
+            height: 400px;
+            border: 1px solid black;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+            justify-content: space-around;
+            align-items: flex-start;
+
+
+            /* Orientación de las cajas */
+            /* flex-direction: row; row-reverse; column; column-reverse;*/
+
+            /* Permitir contenedor multimedia */
+            /*flex-wrap: nowrap; wrap; wrap-reverse;*/
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+
+        #f1 {
+            flex-grow: 1;
+            order: 3;
+        }
+
+        #f2 {
+            flex-grow: 1;
+            order: 1;
+        }
+
+        #f3 {
+            flex-grow: 1;
+            order: 2;
+        }
+            
+        </style>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div class='flex-container'>
+            <div class='flex-item' id='f1'><h1>1</h1></div>
+            <div class='flex-item' id='f2'><h1>2</h1></div>
+            <div class='flex-item' id='f3'><h1>3</h1></div>
+        </div>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

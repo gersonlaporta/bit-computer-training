@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript">
+        
+        function enviaFormulario() {
+
+				var nombre = document.getElementById("nombre").value;
+
+                if (nombre=="#") {
+                    alert("¡El nombre es obligatorio!");
+                    return;
+                }
+
+				var material = document.getElementById("material").value;
+
+                var radio=(document.formulario.radio);
+                for(i in radio) {
+                    if (radio[i].checked) {
+                        var dimension = radio[i].value; 
+                    }
+                }
+
+				var comentarios = document.getElementById("comentarios").value;
+
+				switch (material) {
+					case "Plástico":
+						var precio = 5;
+						break;
+					case "Madera":
+						var precio = 10;
+						break;
+					case "Aluminio":
+						var precio = 20;
+						break;
+					case "Acero":
+						var precio = 25;
+						break;
+					case "Platino":
+						var precio = 200;
+						break;
+				}
+
+                if (dimension=="Mediana") {
+					precio = precio + 20
+				} else if (dimension== "Grande") {
+					precio = precio + 50
+				}
+
+                var mensaje = nombre + ' ha pedido una caja de '+material+' de dimensión '+dimension+'. El precio es de '+precio+'€ ('+comentarios+')';
+
+                document.getElementById("resumen").value = mensaje
+
+        }
+
+// nombre, material y comentarios
+
+        </script>
+
+        <style>
+        
+            label {
+                width: 200px;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            div {
+                height: 300px;
+                width: 500px;
+                margin: auto;
+                border: 2px solid black;
+                padding: 15px;
+                border-radius: 18px;
+            }
+
+            textarea {
+                height: 100px;
+            }
+        
+        </style>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div>
+        <form name="formulario">
+            <label>Nombre del cliente</label>
+                <input type="text" id="nombre" required>
+            </br>
+            <label>Material de la caja</label>
+                <select id="material">
+                    <option>Plástico</option>
+                    <option>Madera</option>
+                    <option>Aluminio</option>
+                    <option>Acero</option>
+                    <option>Platino</option>
+                </select>
+            </br>
+            <label>Dimensiones de la caja</label>
+                Pequeña
+                    <input type="radio" name="dimension" value="Pequeña" checked>
+                Mediana
+                    <input type="radio" name="dimension" value="Mediana">
+                Grande
+                    <input type="radio" name="dimension" value="Grande">
+            </br>
+            <label>Comentarios:</label>
+                <textarea id="comentarios"></textarea>
+            </br>
+            </br>
+                <input type="button" value="Enviar" onclick="enviaFormulario()">
+            </br>
+            </br>
+                <input type="text" id="resumen">
+        </form>
+        </div>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <style type="text/css">
+
+            @font-face { 
+                font-family: caligrafica; 
+                src:url('fonts/RegencyScriptFLF.ttf'); 
+            } 
+            body {
+                background: black;	
+            }
+            div#pergamino {
+                width: 920px;
+                height: 680px;
+                background-image: url('img/pergamino.png');
+                margin: auto;
+                font-family: caligrafica;
+                padding: 150px;
+                font-size: 3em;
+                box-sizing:border-box;
+            }
+            form {
+                text-align: center;
+            }
+            textarea {
+                width: 700px;
+                height: 60px;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+        
+            window.onload=function() {
+                document.getElementById('texto').addEventListener('keyup', escribir)
+            }
+
+            function escribir() {
+                var contenido = document.getElementById('texto').value
+
+                document.getElementById('pergamino').innerHTML = contenido
+            }
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <form>
+            <textarea id='texto'></textarea>
+        </form><br>
+        <div id='pergamino'></div>
+
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

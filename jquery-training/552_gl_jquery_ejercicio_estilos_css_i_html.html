@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	
+	<script>
+
+		$(inicio)
+
+		function inicio() {
+			$('#primer').on('click', estilos1);
+			$('#segundo').on('click', estilos2);
+			$('#deshacer').on('click', restablecer);
+		}
+
+		function estilos1() {
+			$('#primer').css({'background-color': 'yellow','color': 'red'});
+		}
+
+		function estilos2() {
+			$('#segundo').css({'background-color': 'red','color': 'yellow'});
+		}
+
+		function restablecer() {
+			$('#primer, #segundo').css({'background-color': 'white','color': 'green'})
+		}
+	
+	</script>
+
+	<style type="text/css">
+
+		div.script {
+			display: block;
+			background-color: white; 
+			color: black;
+			width: 700px;
+			padding: 25px;
+			margin: 5px auto auto auto;
+			box-sizing: border-box;	
+			text-align: left;
+			border: 2px solid black;
+			border-radius: 25px;
+		}
+		h1 {
+			color: green;
+			background: white;
+			font-family: arial;
+			border: 1px solid black;
+		} 
+
+	</style>
+	<script>
+		
+	</script>
+</head>
+<body>
+
+	<div class="script">
+		<h1 id="primer">Primer texto</h1>
+		<h1 id="segundo">Segundo texto</h1>
+		<h1 id="deshacer">Limpiar</h1>
+	</div>
+	
+</body>
+</html> 

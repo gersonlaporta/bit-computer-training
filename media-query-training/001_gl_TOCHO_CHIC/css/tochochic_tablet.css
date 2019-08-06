@@ -1,0 +1,30 @@
+.contenido {
+    display: block;
+}
+
+section, aside {
+    width: 100%;
+}
+
+article {
+    display: block;
+    width: 100%;
+}
+
+.images, .texts {
+    display: inline-block;
+    width: calc(50% - 5px);
+    vertical-align: top;
+}
+
+aside {
+    border-left: none;
+}
+
+header h1 {
+    width: 75%;
+}
+
+
+
+

@@ -1,0 +1,178 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Hotel Borbonic</title>
+
+<style type="text/css">
+	
+		body {
+			background-color:white;
+			width:100%;
+			margin:0;
+			padding:0;
+		}
+
+		#ovalo {
+			position:absolute;
+			width:100%;
+
+		}
+
+		header {
+			position:relative;
+			width:462px;
+			height:140px;
+			top:0;
+			padding-top:4px;
+			font-family:titulos;
+			font-size:56px;
+			color:white;
+			margin:0 auto 10px auto;
+		}
+
+		#lema {
+			font-family:OpenSans;
+			font-size:16px;
+			color:black;
+			position:relative;
+			top:-65px;
+			left:155px;
+		}
+
+		.texts {
+			margin-top:11px;
+			font-family:OpenSans;
+			font-size:14px;
+			height:60px;
+		}
+
+		#contingut {
+			width:100%;
+			margin:auto;
+			max-width:1000px;
+			display:flex;
+			justify-content:center;
+			flex-wrap:wrap;
+		}
+
+		#explica {
+			width:100%;
+		}
+
+		#contingut article {
+			width:33.3%;
+		}
+
+		article div {
+			text-align:center;
+		}
+
+		article img {
+			border-radius:12px;
+		}
+		
+</style>
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+<script type="text/javascript">
+
+	var textos = new Array('imagen 1', 'imagen 2', 'imagen 3');
+
+	var imagenActiva = -1;
+
+	$(inicio)
+
+	function inicio() {
+		//listener de los eventos del ratón
+		$('.imgs img').on('mouseover', entrar)
+		$('.imgs img').on('mouseout', salir)
+		$('.imgs img').on('click', seleccion)
+	}
+
+	function entrar() {
+		//averiguar la posiciión del article dentro de la caja contenedora
+		var posicion = $(this).closest('article').index()-1
+		//mostrar el texto asociado a la imagen dentro del artible que corresponda
+		var texto = textos[posicion]
+
+		$(this).closest('article').find('texts').html(texto)
+	}
+
+	function salir() {
+		$('texts').empty() 
+	}
+
+	function seleccion() {
+		var posicion = $(this).closest('article').index()-1
+		if (posicion != imagenActiva) { 
+		//activar la imagen seleccionada
+		$('.imgs img').css('opacity', '0.5')
+		//desactivar los evenetos del raton
+		$('.imgs img').off('mouseover').off('mouseout')
+		//cambiar la opacidad de la foto seleccionada
+		$(this).css('opacity', '1')
+		//borrar los textos de todas las fotos
+		$('.texts').empty()
+		//mostrat el texto de la foto activa
+
+		//averiguar la posiciión del article dentro de la caja contenedora
+		var posicion = $(this).closest('article').index()-1
+		//mostrar el texto asociado a la imagen dentro del artible que corresponda
+		var texto = textos[posicion]
+
+		$(this).closest('article').find('texts').html(texto)
+	} else {
+		//activar los eventos del raton
+		$('.imgs img').on('mouseover', entrar).on('mouseout', salir)
+
+		//restablecer la opacidad de todas la iamgenes
+		$('')
+	}
+	}
+		
+</script>
+</head>
+
+<body>
+
+	 <div id="ovalo">
+		<svg width="100%" height="190" xmlns="http://www.w3.org/2000/svg">
+				<ellipse cx="50%" cy="40" rx="60%" ry="100" fill="#462954"/>
+				<ellipse cx="50%" cy="0" rx="40%" ry="120" fill="#6B4B7A"/>
+		</svg>
+	 </div>
+
+     <header>
+        Hotel 'Luis XII'
+        <div id="lema">
+          No encontrarás otro igual
+		</div>
+     </header>
+
+	<section id="contingut">
+
+		<div id="explica">Selecciona la habitación a reservar...</div>
+
+		<article id="img1" class="imgs">
+			<div><img src="img/img1.jpg"></div>
+			<div id="text1" class="texts">sdfsdf</div>
+		</article>
+
+		<article id="img2" class="imgs">
+			<div><img src="img/img2.png"></div>
+			<div id="text2" class="texts"></div>
+		</article>
+
+		<article id="img3" class="imgs">
+			<div><img src="img/img3.jpg"></div>
+			<div id="text3" class="texts"></div>
+		</article>
+
+		<button id="reservar">Reservar</button>
+
+	</section>
+
+</body>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+        
+            * {
+                font-family: arial;
+                box-sizing: border-box;
+            }
+
+            .contenedor {
+                max-width: 1600px;
+                margin: auto;
+            }
+            
+            .cabecera {
+                background-color: blanchedalmond;
+                background-image: url("img/punta_cana_1.jpg");
+                background-repeat: no-repeat;
+                height: 600px;
+                background-position: center;
+                background-size: cover;
+
+                /*centrar ttíulo*/
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                /*centrar barra navegación*/
+                position: relative;
+            }
+            
+            h2 {
+                color: white;
+                font-size: 50px;
+                position: absolute;
+                left: 350px;
+                bottom: 225px;
+                /*margin: 0px;*/
+            }
+
+            nav {
+                background-color: rgba(0, 47, 255, 0.39);
+                height: 80px;
+                /*posicionar la barra en la aprt einferior del header*/
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                /*indicar  expresamente que la caja mantenga el 100% del ancho de la caja contenedora*/
+                width: 100%;
+
+                /*centrar opciones de navegación*/
+                text-align: center;
+            }
+
+            nav li {
+                /*width: 185px;*/
+                display: inline-block;
+                list-style-type: none;
+            }
+
+            nav ul {
+                /*eliminar el margen superior y izquierdo que tiene por defecto la etiqueta ul*/
+                margin:0px;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                /*cambiar display para que acepte el ancho*/
+                font-size: 30px;
+                width: 185px;
+                /*dispone los links en forma alineación bloque*/
+                display: inline-block;
+                /*centra verticalmente*/
+                line-height: 80px;
+            }
+
+            a:hover {
+                background-color: rgba(243, 252, 252, 0.3);
+                
+            }
+
+            .section1 {
+                padding: 25px;
+                overflow: hidden;
+                font-size: 18px;
+            }
+
+            .section2 {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .section3 {
+
+            }
+
+            .imagenpdf {
+			float: left;
+			margin-right: 20px;
+            }
+
+            article {
+                background-color: antiquewhite;
+                display: inline-block;
+                width: 25%;
+                min-width: 250px;
+                text-align: justify;
+                margin: auto 10px;
+                font-size: 17px;
+            }
+
+            .section3 {
+                background-color: antiquewhite;
+                text-align: center;
+            }
+
+            .section3 div {
+                border: 1px solid blue;
+                height: 450px;
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+                text-align: left;
+                padding: 20px;
+            }
+
+            /*.forms {
+                background-color: gray;
+                height: 450px;
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+            }*/
+
+            /*.map {
+                height: 450px;
+                width: 49%;
+                display: inline-block;
+                vertical-align: top;
+            }*/
+
+            /*ancho de 350px aplique a todos los input excepto las input submit*/
+            input:not([type='submit']) {
+                width: 250px;
+            }
+
+            label {
+                width: 200px;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            textarea {
+                width: 250px;
+                height: 200px;
+            }
+
+            
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+
+        <div class="contenedor">
+        <header class="cabecera">
+            <h2>PUNTA CANA</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">SECCION 1</a></li>
+                    <li><a href="#">SECCION 2</a></li>
+                    <li><a href="#">SECCION 3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="section1">
+            <a href="img/punta_cana.pdf" target="_blank"><img class="imagenpdf" src="img/punta_cana_pdf.png" height="250px"></a>
+            <h3>SECCION 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem corporis dolorum debitis blanditiis labore perspiciatis commodi doloremque temporibus molestiae quo, repellat repudiandae esse officia cupiditate atque ex non tempora? Fugiat.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic incidunt eligendi atque possimus excepturi dolores eum quibusdam, suscipit autem vitae! Officiis maxime nisi placeat est, nostrum mollitia voluptas ex cumque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci aliquam culpa ex possimus tempora repellat totam tempore.Lorem ipsum dolor sit amet consectetur adipisicing.</p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere illum distinctio iusto harum cumque ducimus deleniti cupiditate repudiandae doloribus eaque dolorum dolores at laboriosam quae reiciendis, saepe ea excepturi optio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quam harum obcaecati quia provident inventore fugit aperiam excepturi, minima aliquam dignissimos voluptatem ea cumque, architecto, numquam maxime pariatur quod fuga?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem corporis dolorum debitis blanditiis labore perspiciatis commodi doloremque temporibus molestiae quo, repellat repudiandae esse officia cupiditate atque ex non tempora? Fugiat.<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic incidunt eligendi atque possimus excepturi dolores eum quibusdam, suscipit autem vitae! Officiis maxime nisi placeat est, nostrum mollitia voluptas ex cumque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci aliquam culpa ex possimus tempora repellat totam tempore.Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </p>
+        </section>
+        <section class="section2">
+            <h3>SECCION 2</h3>
+            <article>
+                <img src="img/punta_cana_2.jpg" width="100%">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium velit temporibus laborum fugit sint enim distinctio cum, quaerat, nihil eius ex non recusandae deleniti veniam id nam doloremque officiis voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </article>
+            <article>
+                <img src="img/punta_cana_3.jpg" width="100%">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium velit temporibus laborum fugit sint enim distinctio cum, quaerat, nihil eius ex non recusandae deleniti veniam id nam doloremque officiis voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </article>
+            <article>
+                <img src="img/punta_cana_4.jpg" width="100%">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium velit temporibus laborum fugit sint enim distinctio cum, quaerat, nihil eius ex non recusandae deleniti veniam id nam doloremque officiis voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </article>
+        </section>
+        <section class="section3">
+            <h3>SECCIÓN 3</h3>
+            <div class="forms">
+                <form action="#" method="post">
+                <label>Nombre y apellidos</label>
+                    <input type="text" name="nombre" required>
+                    <br>
+                    <br>
+                <label for="correo">Correo electrónico:</label>
+                    <input id="correo" type="email" name="email" required>
+                    <br>
+                    <br>
+                <label for="tel" >Teléfono:</label>
+                    <input type="tel" name="telefono">
+                    <br>
+                    <br>
+                <label>Mensaje</label>
+                    <textarea cols="20" rows="5" maxlength="500" required></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" name="enviar" value="Enviar">
+                    <!-- <button name="enviar">Enviar formulario (button)</button> -->
+                </form>
+            </div>
+            <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11971.712324547507!2d2.1900505!3d41.3973682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2ce5e151b3383c3c!2sNETMIND%2C+SL!5e0!3m2!1sen!2ses!4v1547802113090" width="460" height="410" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <footer>
+            <div>
+            </div>
+        </footer>
+        </div>
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

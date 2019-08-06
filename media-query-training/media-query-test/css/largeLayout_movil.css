@@ -1,0 +1,40 @@
+header{
+	height:180px;
+	background:url("../img/landscape_small.jpg"); 
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+aside {
+	width: 85%;
+	display: block;
+	height: 175px;
+}
+
+nav{
+	background:grey; 
+	margin-top:0px;
+	text-align: center;
+	height: auto;
+}
+
+nav li {
+	display: block;
+	margin: 5px;
+}
+
+nav ul {
+    padding: 0px;
+}
+
+nav a {
+    border: 1px solid black;
+	border-radius: 10px;
+	width: 90%;
+}
+
+aside img {
+	height: 150px;
+	width: 150px;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+        <script type="text/javascript">
+
+            //cuando se cargue la página mirar si tenemos guardado algo en el storage
+            $(inicio)
+
+            function inicio() {
+                if (localStorage.getItem('lista')!=undefined) {
+                    //leer el local storage
+                    var lista = localStorage.getItem('lista')
+
+                    //mover el contenido a la lista html
+                    $('#editable').html(lista)
+                } else {
+                    $('#editable').html('<li>')
+                }
+            }
+        
+            function guardar() {
+                //recuperar el contenido a guardar
+                var contenido = $('#editable').html()
+
+                alert(contenido)
+
+                if (contenido.trim()=='') {
+                    contenido='<li><li>';
+                }
+
+                //guardar el contenido en el storage
+                localStorage.setItem('lista', contenido)
+            }
+
+            function borrar() {
+                if (confirm('¿Estás seguro?')) {
+                //borrar la lista del storage
+                localStorage.removeItem('lista')
+
+                //reiniciar la lista en al etiqueta ul
+                $('#editable').html('<li></li>')
+
+                //informar al usuario
+                alert('lista borrada')
+                }
+            }
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <section>
+            <h2>Escribe tu pedido:</h2>
+                <ul id="editable" contenteditable>
+                    <li>2 bolsas de patatas</li>
+                    <li>1 dónut</li>
+                    <li>4 Kg. de boniatos</li>
+                </ul>
+        </section>
+        <br>
+            <input type="button" value='guardar' onclick="guardar()">
+            <input type="button" value='borrar' onclick="borrar()">
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

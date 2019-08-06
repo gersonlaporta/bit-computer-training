@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/page.css" type="text/css" />
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+	<script type="text/javascript">
+
+    $(inicio)
+
+    function inicio() {
+		//activar listener botón de enviar formulario
+		$('#enviar').on('click', envia);
+		//activar listener de cantidad
+		$('#cantidad').on('change', cantidad);
+        /*activar listener de radio-talla
+		$('#color').on('change', colores);*/
+        //activar listener de la combo de monedas
+		$('#color').on('change', colores);
+	}
+
+	//definir función de tratar formulario
+	function envia() {
+		//recuperar nombre y dirección
+		var nombre = $('#nombre').val()
+            /*if (nombre='') {
+                nombre = nombre.style = "yellow"
+            } */
+		var direccion = $('#direccion').val()
+        var cantidad = $('#cantidad').val()
+        var tallas = $('input[type=radio]:checked').val()
+        var colores = $('#color').val()
+
+            switch (colores){
+                    case 'camiseta_blanca':
+                        precio = 10;
+                        break;
+                    case 'camiseta_amarilla':
+                        precio = 12;
+                        break;
+                    case 'camiseta_naranja':
+                        precio = 12;
+                        break;
+                    case 'camiseta_roja':
+                        precio = 12;
+                        break;
+                    case 'camiseta_verde':
+                        precio = 12;
+                        break;
+                    case 'camiseta_azul':
+                        precio = 12;
+                        break;
+                    case 'camiseta_verde':
+                        precio = 12;
+                        break;
+                    case 'camiseta_negra':
+                        precio = 12;
+                        break;
+                    default:
+                }
+
+//---------------alert-----------------
+		//validar nombre y dirección informados
+		if (nombre.trim() =='' || direccion.trim() =='' || cantidad.trim() =='') {
+			alert('¡nombre, dirección y cantidad son obligatorios!')
+			return
+		}
+//-------------------------------------
+
+		//var talla = document.getElementById("talla").value;
+        var talla = $('talla').val();
+
+        var radio=(document.formulario.radio);
+            for(i in radio) {
+                if (radio[i].checked) {
+                    var tallas = radio[i].value; 
+                }
+            }
+
+        /*function cambiaColor() {
+            document.getElementById("#nombre").style.background="yellow";
+            document.getElementById("#direccion").style.background="yellow";
+        }
+        
+        //Así se llaman a las funciones
+        cambiaColor()*/
+
+
+
+//---------------mensaje final-----------------
+
+var descripcion = $('#color option:selected').text()
+
+var mensaje = nombre+ " ha comprado " +cantidad+" camisetas de color "+colores+" y talla "+tallas+ ".<br>"+"Precio total: "+precio+"€. Dirección de envío: "+direccion
+
+//enviar el mensaje al div con id 'resultado'
+$('#resumen').html(mensaje)
+}
+//---------------------------------------------
+
+
+//-------------------cambio imagen derecha--------------------------
+
+//definir función de mostrar imagen de la moneda
+	function foto() {
+			//recuperar moneda (nos llegará el contenido del atributo value)
+			var colorderecha = $('#color').val()
+
+			if (colorderecha !='000') {
+				//confeccionar una etiqueta <img> para mostrar la moneda que corresponda a la selección
+				var imagen = "<img src='img/"+colorderecha+".jpg'>"
+
+				//enviar la etiqueta <img> al div con id 'imagen'
+				$('#camiseta').html(colorderecha)
+			} else {
+				$('#camiseta').empty()
+			}
+		}
+
+//------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------
+    var apuntador = $(this).closest('tr').index()
+    arrar_elementos.slice(apuntador,1);
+
+    array_articulos.push(nombre_producto);
+    array_precios.push(precio_articulo);
+
+    var etiqueta = "<tr><td>"+nombre_producto+"<td>"+"<td>"+precio_articulo+"</td>"+"<td class='borrar'>X</td></tr>";
+
+    $('#lista').append(etiqueta);
+
+    function borrar_articulo() {
+        var apuntador = $(this).closest('tr').index();
+        array_articulos.splice(apuntador,1);
+        array_precios.splice(apuntador,1);
+        $(this).closest('tr').remove();
+    }
+	
+    function borrar() {
+        var posicion = $(this).closest("tr").index();
+        console.log(arrPosition);
+        arr.splice(posicion, 1);
+        $(this).closest("tr").empty();
+    }
+
+    </script>
+</head>
+<body>
+
+    <div class='contenedor'>
+
+        <section>
+        
+            <div class='info1'>
+
+                <form name='formulario'>
+
+                    <label>Nombre y apellidos</label>
+                    <input type='text' id='nombre' required><br><br>
+
+                    <label>Dirección</label>
+                    <input type='text' id='direccion' required><br><br>
+
+                    <label>Cantidad</label>
+                    <input type='number' id='cantidad' value='1' min='1'><br><br>
+
+                    <label>Seleccione talla:</label>
+                    XS<input type='radio' name='talla' checked value='XS'>
+                    S<input type='radio' name='talla' value='S'>
+                    M<input type='radio' name='talla' value='M'>
+                    L<input type='radio' name='talla' value='L'>
+                    XL<input type='radio' name='talla' value='XL'><br><br>
+
+                    <label>Seleccione color:</label>
+                    <select id='color'>
+                        <option value='000' disabled>Elija una opción</option>
+                        <option value='camiseta_blanca'>blanca</option>
+                        <option value='camiseta_amarilla'>amarilla</option>
+                        <option value='camiseta_naranja'>naranja</option>
+                        <option value='camiseta_roja'>roja</option>
+                        <option value='camiseta_verde'>verde</option>
+                        <option value='camiseta_azul'>azul</option>
+                        <option value='camiseta_negra'>negra</option>
+                    </select><br><br>
+
+                    <input type='button' id='enviar' value='Enviar'><br><br>
+                    <div id='resumen'></div>
+
+                </form>
+
+            </div>
+
+            <div class='info2'>   
+                <img id='camiseta' src='img/camiseta_blanca.png'>
+            </div>
+
+        </section>
+        
+        <section>
+            <form>
+            	<label>Artículo</label>
+            	<input type='text' id='articulo' required>
+            	<label>Precio</label>
+            	<input type='number' id='precio' required min='0'>
+            	<input type='button' id='alta' value='Alta artículo'>
+            </form><br><br>
+            <div>
+            	<table id='lista'></table>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<style type="text/css">
+
+		div#wrapper{
+			width: 600px;
+			height: 300px;
+			border:1px solid black;
+			border-radius: 15px;
+			padding: 15px;
+			background-color:white;
+			margin:auto;
+            
+		}
+        div#box {
+            height: 50px;
+            background-color: bisque;
+        }
+
+		label {
+			width: 180px;
+			display: inline-block;
+			vertical-align: top;
+            text-align: left;
+		}
+        input#nom{
+            width: 300px;
+        }
+	</style>
+
+	<script>
+        
+        //Al carregar la pàgina
+		$(inici)
+		function inici(){
+            //Activem listener del boto
+			$('#boto').on('click',calcula);
+		}
+
+        //Funcio calcular
+		function calcula(){
+            console.log('Calculo')
+
+            nom = $('#nom').val();
+            console.log('Nom: '+nom);
+            if (nom.trim() == '') {
+                alert('Nombre y apellidos obligatorios.')
+                return;
+            }
+
+            quants = $('#quantitat').val()
+			console.log('Quants: '+quants)
+            if (quants <= 0 ){
+                alert('La cantidad ha de ser 1 o superior.')
+                return;
+            }
+            var preu = 20 * quants;
+//----------------------------------------------------------
+            color = $('input[type=radio]:checked').val();
+            console.log('Color: '+color)
+            switch (color){
+                case 'blanca':
+                    break;
+                case 'color':
+                    preu += 5;
+                    break;
+                case 'estampada':
+                    preu += 10;
+                    break;
+                case 'fullprint':
+                    preu += 15;
+                    break;
+                default:
+            }
+            console.log('Nou preu amb color:'+preu);
+
+            a_opcions = $('input[type=checkbox]:checked');
+            var msg_opt = '';
+            a_opcions.each( function (){
+
+                var opt = $(this).val();
+                if (opt == 'regalo'){
+                    preu+= 10;
+                    msg_opt+= ' regalo' ;
+                } else {
+                    preu += 20;
+                    msg_opt+=' envio';
+                }
+                console.log('Opcions:'+opt);
+                
+            })
+            if (quants == 1){
+                missatge = nom + ' ha adquerido '+quants+' camiseta de color '+color;
+            } else {
+			    missatge = nom + ' ha adquerido '+quants+' camisetas de color '+color;
+            }
+
+            if (msg_opt!=''){
+                missatge += ', con opciones: '+msg_opt;
+            }
+			missatge += '. <br>Precio total de '+preu+'€';
+            $('#box').html(missatge);
+		}
+
+	</script>
+
+</head>
+<body>
+
+<div id='wrapper'>
+
+    <form id='formulari'>
+        <br>
+        <label>Nombre y apellidos</label>
+        <input type='text' id='nom'><br><br> 
+        
+        <label>Cantidad</label>
+        <input type='number' id='quantitat' min='1' value="1"><br><br> 
+
+        <label>Color</label>
+            <span>Blanca</span>
+                <input type="radio" name="radio" id="rd1" value="blanca" checked >
+            <span>Color</span>
+                <input type="radio" name="radio" id="rd2" value="color">
+            <span>Estampada</span>
+                <input type="radio" name="radio" id="rd3" value="estampada">
+            <span>Fullprint</span>
+                <input type="radio" name="radio" id="rd4" value="fullprint">
+            <br><br>
+        <label>Opciones</label>
+
+        <span>Papel regalo</span>
+        <input type="checkbox" name="ckbox" id="cb1" value="regalo">
+        <span>Envio</span>
+        <input type="checkbox" name="ckbox" id="cb2" value="envio">
+
+    </form>
+    <br><br>
+    <label></label>
+    <input type="button" id="boto" value="Enviar">
+    <br><br>
+    <div id='box'></div>
+
+</div>
+    
+</body>
+</html> 

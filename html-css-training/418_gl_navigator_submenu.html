@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="css/310_gl_estilos.css">
+        -->
+
+<!-- Principio del CSS -->
+        <style type="text/css">
+        
+            a {
+                background-color: silver;
+                width: 120px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                display: inline-block;
+                color: black;
+                text-decoration: none;
+                font-family: helvetica;
+                border: 1px solid rgb(0, 0, 0);
+                
+            }
+
+            a:hover {
+                color: red;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            li:first-child a {
+                border-radius: 15px 0px 0px 15px;
+            } 
+
+            li:last-child a {
+                border-radius: 0px 15px 15px 0px;
+            }
+
+            #div1 {
+                background: rgba(253, 4, 4, 0.5);
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                position: absolute;
+                left: 100px;
+                top: 10px;
+            }
+
+            #div2 {
+                background: rgba(3, 3, 243, 0.5);
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+            }
+
+            #div3 {
+                background: rgba(249, 253, 4, 0.5);
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                position: absolute;
+                left: 200px;
+                top: 10px;
+            }
+
+            /*las opciones del submenu deben aparecer en posición vertical*/
+            .submenu li {
+                display: block;
+            }
+
+            /*suprimier el margen interior de la lista que contiene el submenu*/
+            .submenu ul {
+                padding: 0px;
+                /*display: none;*/
+                height: 0px;
+                overflow: hidden;
+                transition: 0.5s;
+                position: absolute;
+            }
+
+            .submenu:hover ul {
+                /*display: block;*/
+                height: 100px;
+            }
+
+            .submenu ul a {
+                border-radius: 15px;
+            }
+
+            section {
+                background-color: salmon;
+                height: 300px;
+                width: 700px;
+            }
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <na>
+        <ul>
+            <li class="submenu"><a href="#">Work</a>                      <ul>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Web</a></li> 
+                    <li><a href="#">Illustration</a></li>
+            </ul></li>
+            <li><a href="#">About</a></li> 
+            <li class="submenu"><a href="#">Contact</a>
+                <ul>
+                    <li><a href="#">Yo</a></li>
+                    <li><a href="#">Tu</a></li> 
+                    <li><a href="#">Nosotros</a></li>
+                </ul>
+            </li>
+            <li class="submenu"><a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Html CSS</a></li>
+                    <li><a href="#">Javascript</a></li> 
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </li>
+        </ul>
+        </na> 
+        <section></section>  
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="css/310_gl_estilos.css">
+        -->
+
+<!-- Principio del CSS -->
+        <style type="text/css">
+        
+            .contenedor {
+                width: 300px;
+                height: 300px;
+                background-color: grey;
+                transition: transform 5s;
+                position: relative;
+                overflow: hidden;
+
+            }
+
+            .contenedor:hover {
+                transform:translateX(400px);
+            }
+
+            button {
+                background-color: aqua;
+                width: 100px;
+                height: 50px;
+                border: 4px ridge silver;
+                box-shadow: 3px 3px 3px silver;
+                transition: 2s;
+                margin: auto;
+            }
+
+            button:hover {
+                box-shadow: 1px 1px 1px silver;
+                transform: translate(2px 2px);
+                transform:rotate(2000deg);
+            }
+            
+            img {
+                width: 100%;
+
+            }
+
+            .etiqueta {
+                height: 30px;
+                width: 180px;
+                background-color: red;
+                position: absolute;
+                top: 20px;
+                left: -45px;
+                transform: rotate(-45deg);
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                font-family: helvetica;
+            }
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div class="contenedor">
+            <img src="img/horse.jpg">
+            <div class="etiqueta">OFERTA</div>
+        </div>
+        <br>
+        <button></button>
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Transform se desplaza en función de cordenadas X y Y.
+
+Para la combinación de ambos se desplazaría en diagonal hasta alcanzar la coordenada.
+transform:translate(400px, 200px);
+
+
+-->

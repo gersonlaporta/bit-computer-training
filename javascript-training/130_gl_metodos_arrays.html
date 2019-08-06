@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css">
+
+        <script type="text/javascript">
+        
+            /* METODOS PARA TRABAJAR CON ARRAYS I, II, III */
+
+            /* El objeto Array tiene una única propiedad: array.length pero un gran número de métodos: */
+
+        /* join - convierte un array a una cadena de texto */
+
+            array0 = new Array('red', 'blue', 'yellow', 'green')
+            document.write("array0: "+array0.join(','))
+
+        /* split - convierte una cadena de texto en array. 
+        Como parámetro del método se indica el separador a utiliza */
+        document.write('<br>')
+
+            texto1 = 'coche, carro, carretilla, carrito'
+            array = texto1.split(',')
+            document.write("texto1: "+texto1)
+
+        /* concat - concatena dos arrays en uno */
+        document.write('<br>')
+
+            array1 = new Array('rojo', 'azul', 'amarillo', 'verde')
+                document.write("array1: "+array1)
+                document.write('<br>')
+            array2 = new Array('lila', 'rosa', 'naranja', 'negro')
+                document.write("array2: "+array2)
+                document.write('<br>')
+            resultado = array1.concat(array2)
+                document.write("array1 + array2 = "+resultado)
+
+        /* push - añadir elementos al final del array */
+        document.write('<br>')
+            
+            array3 = new Array('España', 'Francia', 'Italia', 'Alemania')
+            array3.push('Inglaterra', 'Irlanda', 'Escocia')
+            document.write("array3: "+array3)
+
+        /* pop - eliminar el último elemento del array 
+        (No se cómo se eliminan dos o más) */
+        document.write('<br>')
+
+            array4 = new Array('tomate', 'lechuga', 'cebolla', 'ajo', 'guisante')
+            array4.pop() //borra el último
+            document.write("array4: "+array4)
+        
+        /* shift - eliminar el primer elemento del array */
+        document.write('<br>')
+
+            array5 = new Array('kiwi', 'platano', 'melon', 'manzana')
+            array5.shift() //borrar el primero
+            document.write("array5: "+array5)
+
+        /* unshift - inserta elementos al principio del array */
+        document.write('<br>')
+
+            array6 = new Array('helvetica', 'arial', 'georgia', 'times')
+            array6.unshift('trajan', 'montserrat') //añade al principio
+            document.write("array6: "+array6)
+
+        /* sort - ordenar el array alfabéticamente creciente(ascendente) */
+        document.write('<hr>')
+        /* reverse - ordenar el array alfabéticamente decreciente (descendente) */
+
+            array7 = new Array('marta', 'maria', 'carla', 'elisabeth')
+            array7.sort()
+            document.write("array7 creciente: "+array7)
+
+            document.write('<br>')
+            array7.reverse()
+            document.write("array7 decreciente: "+array7)
+
+        /* splice - reemplaza elementos del array desde una posición del mismo */
+        document.write('<hr>')
+
+            array8 = new Array('Madrid', 'París', 'Londres', 'Berlin') 
+            array8.splice(1,2,'Roma', 'Budapest')
+            document.write("array8: "+array8)
+
+            document.write('<br>')
+            array9 = new Array('b', 'c', 's', 'x') 
+            array9.splice(1,2,) /* ¡sin substitutorios se borran!*/
+            document.write("array9: "+array9)
+
+        /* slice - obtener un segundo array a partir de un primero.
+        De un elemento array (incluiyéndolo) a un segundo array (sin incluirlo)*/
+        document.write('<hr>')
+
+            array10 = new Array('0', '1', '2', '3', '4', '5')
+            array11 = array10.slice(0,3)
+            document.write("array11: "+array11)
+            document.write('<br>')
+            array11 = array10.slice(0,4)
+            document.write("array11: "+array11)
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+            <p>Ejemplo de texto</p>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

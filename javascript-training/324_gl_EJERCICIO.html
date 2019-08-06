@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- <link rel="stylesheet" type="text/css" 
+        href="css/310_gl_estilos.css"> -->
+
+        <style>
+        
+        #caja1 {
+            background-color: green;
+            height: 200px;
+            width: 400px;
+            color: white;
+        }
+
+        #caja2 {
+            background-color: cyan;
+            height: 200px;
+            width: 400px;
+        }
+
+        </style>
+
+        <script type="text/javascript">
+        
+        window.onload=function() {
+            document.getElementById('caja1').
+                addEventListener('click', texto1)
+
+            document.getElementById('caja2').
+                addEventListener('dblclick', texto2)
+        }
+
+        function texto1() {
+                document.getElementById("caja2").innerHTML+= 
+                "click sobre la capa 1 <br>";
+        }
+
+        function texto2() {
+                document.getElementById("caja1").innerHTML+= 
+                "dblclick sobre la capa 2 <br>";
+        }
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <div id="caja1"></div>
+        <div id="caja2"></div>
+
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

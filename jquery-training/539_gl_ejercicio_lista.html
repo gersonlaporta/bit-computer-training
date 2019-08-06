@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- <script type="text/javascript" src='https://code.jquery.com/jquery-3.3.1.js'></script> -->
+
+        <script type="text/javascript" src='js/jquery.js'></script>
+
+        <script type="text/javascript">
+
+            //crear un array vacio
+            var lista = new Array();
+    
+            $(inicio)
+
+            //activar dos listeners para detectar clock en cada una de las cajas
+            function inicio() {
+                $('#anadir').on('click', anadir)
+                $('#borrar').on('click', borrar)
+
+                $('li').on('click', ver)
+            }
+
+            function ver() {
+                //recuperar contenido de la opción de la lista sobre la que hemos hecho click
+                var opcion =$(this).text()
+
+                alert(opcion)
+            }
+
+            //activar listeners de añadir y borrar lista cuando se cargue la página
+
+            //definir función añadir elemento
+            function anadir() {
+                //recuperar dato del formulario
+                var elemento = $('#elemento').val();
+                //---> comprobar si el elemento existe en el array
+                var indice = lista.includes(elemento)
+                //---> si no existe añadir el dato recuperado a la lista y al array
+                if (!indice) {
+                    //añadir el dato recuperado a la lista
+                    $('#lista').append('<li>'+elemento+'<li>')
+                    lista.push(elemento)
+
+                    $('li').off('click')
+                    $('li').on('click', ver)
+                    
+                } else {
+                    alert('elemento ya existe')
+                    return
+                }
+                    //borrar el contenido del input
+                    $('#elemento').val('')
+            }
+            
+            //definir función borrar lista
+            function borrar() {
+                //vaciar la lista
+                $('#lista').empty()
+
+                //borrar el array
+                lista = [];
+
+            }
+            
+        </script>
+
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <input type='text' id='elemento'>
+        <input type='button' id='anadir' value='Añadir elemento'>
+        <input type='button' id='borrar' value='Borrar lista'>
+        <br><br>
+	    <ul id='lista'></ul>
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

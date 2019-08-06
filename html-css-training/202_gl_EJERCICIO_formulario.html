@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+
+<!-- Principio del CSS -->
+        <style>
+        
+            label {
+                font-family: helvetica;
+                width: 200px;
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            span {
+                font-family: helvetica;
+            }
+
+            input[required] {
+                border: 1.5px solid red;
+            }
+
+            input:invalid {
+                background-color: rgb(238, 210, 210);
+            }
+        
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <form action="#" method="get">
+            <label for="nombre">Nombre y apellidos*</label>
+                <input id="nombre" type="text" name="nombre" maxlength="15" autofocus required>
+                <br>
+            <label for="dni">DNI/NIF - NIE</label>
+                <input id="dni" type="text" name="nombre" maxlength="15" autofocus required disabled placeholder="29928331Z">
+                <br>
+            <label for="años">¿Cuántos años tienes?</label>
+                <input id="años" type="number" min="18" max="120" step="xx" name="numero">
+                <br>
+            <label for="tel">¿Número de teléfono?</label>
+                <input pattern="^[0-9]{9}$" id="tel" type="tel" name="tel">
+                <br>
+            <label for="correo">Escribe tu email:*</label>
+                <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="ejemplo@ejemplo.com" id="correo" type="email" name="email" required>
+                <br>
+            <label for="publi">¿Desea recibir publicidad?</label>
+                <br>
+                <input id="publi" type="radio" name="radio" value="si">
+                <span>SI</span>
+                <input type="radio" name="radio" value="no"> 
+                <span>NO</span>
+                <br>
+                <input id="news" type="checkbox" name="check" value="pintura" required>
+                <label for="news">Quiero recibir newsletter</label>
+                <br>
+                <label>Escriba su comentario</label>
+                <textarea cols="40" rows="10" maxlength="500"> Contenido que se asigna a value
+                </textarea>
+                <br>
+                <label>Ciudad:</label>
+                <select name="ciudad">
+                        <option disabled selected>Seleccione ciudad</option>
+                    <optgroup label="1.- America">
+                        <option>New York</option>
+                        <option>Brasilia</option>
+                        <option>Boston</option>
+                        <option>Chicago</option>
+                        <option>Los Angeles</option>
+                        <option>Buenos Aires</option>
+                    </optgroup>
+                    <optgroup label="2.- Europe">
+                        <option>Paris</option>
+                        <option>London</option>
+                        <option>Madrid</option>
+                        <option>Berlin</option>
+                        <option>Amsterdam</option>
+                        <option>Barcelona</option>
+                    </optgroup>
+                    <optgroup label="3.- Europe">
+                        <option>Tokyo</option>
+                        <option>Singapur</option>
+                        <option>Bangladesh</option>
+                        <option>Bangkok</option>
+                        <option>Beijing</option>
+                        <option>Hong Kong</option>
+                    </optgroup>
+                    <optgroup label="4.- Africa">
+                            <option>Nairobi</option>
+                            <option>Lagos</option>
+                            <option>Cairo</option>
+                            <option>Dakar</option>
+                            <option>Kigali</option>
+                            <option>Yaoundé</option>
+                        </optgroup>
+                </select>
+                <br>
+                <label>País:</label>
+                    <input list="pais">
+                    <datalist id="pais">
+                        <option>EEUU</option> <option>UK</option> <option>Argentina</option> <option>France</option>
+                        <option>Germany</option>
+                        <option>Bolivia</option>
+                        <option>Perú</option>
+                        <option>Canada</option>
+                        <option>Portugal</option>
+                        <option>Japan</option>
+                        <option>China</option>
+                        <option>Russia</option>
+                        <option>Italy</option>
+                        <option>Greece</option>
+                        <option>Poland</option>
+                        <option>Austria</option>
+                        <option>Netherland</option>
+                        <option>Ukraine</option>
+                        <option>Sweden</option>
+                        <option>Norway</option>
+                        <option>Iceland</option>
+                        <option>Romania</option>
+                        <option>Malta</option>
+                        <option>Denmark</option>
+                        <option>Czech Republic</option>
+                        <option>Ireland</option>
+                        <option>Hundary</option>
+                        <option>Finland</option>
+                        <option>Bulgaria</option>
+                        <option>Cyprus</option>
+                        <option>Luxembourg</option>
+                        <option>Serbia</option>
+                        <option>Slovenia</option>
+                        <option>Albania</option>
+                        <option>Slovakia</option>
+                        <option>Lithuania</option>
+                        <option>Estonia</option>
+                        <option>Montenegro</option>
+                        <option>Latvia</option>
+                        <option>Monaco</option>
+                        <option>Belarus</option>
+                        <option>Vatican City</option>
+                        <option>Moldova</option>
+                        <option>Gibraltar</option>
+                        <option>Bosnia and Herzegovina</option>
+                        <option>Macedonia</option>
+                        <option>Andorra</option>
+                        <option>Faroe Islands</option>
+                        <option>Liechtenstein</option>
+                        <option>San Marino</option>
+                        <option>Jersey</option>
+                        <option>Álan Islands</option>
+                        <option>Svalbard and Jan Mayen</option>
+                        <option>Guemsey</option>
+                    </datalist><br><br>
+                    <input type='submit' value='enviar'>
+                <hr>
+                <input type="submit" name="enviar">
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->

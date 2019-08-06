@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <!-- 
+        <link rel="stylesheet" type="text/css" href="css/310_gl_estilos.css">
+        -->
+
+<!-- Principio del CSS -->
+        <style type="text/css">
+
+            /*display:block*/
+            .caja4 {
+                border: 2px solid blue;
+                display: block;
+                width: 300px;
+                height: 80px;
+            }
+
+            /*display:inline*/
+            .caja1 {
+                border: 2px solid blue;
+                display: inline;
+            }
+
+            /*display:inline-block*/
+            .caja2 {
+                border: 2px solid blue;
+                display: inline-block;
+                width: 300px;
+                vertical-align: top;
+            }
+
+            .oculta { 
+                border: 2px solid blue;
+                display: none;
+                /*visibility: hidden;*/
+                width: 300px;
+                height: 400px;
+            }
+
+
+
+        </style>
+<!-- Final del CSS -->
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+
+        <h1>Display inline, block, inline-block y none</h1>
+
+        <div class="caja4">caja4 Esta caja es display:block con salto de linea y su ancho lo determina el contenido o, si lo tiene especificado, el atributo width y height</div>
+        <div class="caja4">caja4 Esta caja es display:block con salto de linea y su ancho lo determina el contenido o, si lo tiene especificado, el atributo width y height</div>
+
+        <hr>
+
+        <div class="caja1"> caja1 Esta caja es display:inline sin salto de linea y su ancho se ajusta a este contenido</div>
+        <div class="caja1">caja1 Esta caja es display:inline sin salto de linea y su ancho se ajusta a este contenido</div>
+
+        <hr>
+
+        <div class="caja2">caja2 Esta caja es display:inline-block sin salto de linea y su ancho lo determina el contenido o, si lo tiene especificado, el atributo width y height</div>
+        <div class="caja2">caja2 Esta caja es display:inline-block sin salto de linea y su ancho lo determina el contenido o, si lo tiene especificado, el atributo width y height</div>
+
+        <hr>
+
+        <div class="oculta">caja3 oculta Esta caja es display:none y no se visualiza ni ocupa espacio</div>
+        <div class="caja3">caja3 Esta caja ocupa el espacio de la anterior</div>
+        
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+La propiedad 'display' define el tipo de caja que generará el elemento y permite modificar el tipo por defecto de la misma. Caja de bloque con salto de línea antes y después del elemento. El elemento ocupa todo el espacio definido por un ancho (width) y un alto (height). En caso de omitirse el alto la caja irá creciendo según se añada contenido.
+-->

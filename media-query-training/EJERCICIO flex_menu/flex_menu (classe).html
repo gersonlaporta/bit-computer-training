@@ -1,0 +1,125 @@
+<!doctype html>
+ <html>
+   <head>
+      <meta charset="utf-8"/>   
+      <title>Título de la página</title>
+      <style type="text/css">
+         #contenedor{
+            width: 100%;
+            max-width:1300px;
+            margin:auto;
+			
+         }
+         header{
+            position:relative;
+            height:65px;
+			     background-color:cyan;
+           
+           
+         }
+
+         nav {
+          display: flex;
+          justify-content: flex-start;
+          
+         }
+         
+         nav a{
+            text-decoration:none;
+            background-color: grey;
+			      padding:0 15px;
+            line-height:65px;
+            color:white;
+         }
+
+         nav a:hover{
+            background-color:black;
+         }
+         
+         #rayitas{
+            top:0px;
+            position:absolute;
+            left:10px;
+            padding-top:5px;
+            display:none;
+         }
+
+         section {
+          height: 300px;
+          background-color: green;
+         }
+
+         @media only screen and (max-width:1000px) {
+          #rayitas {
+            display: block;
+          }
+
+          nav {
+            position: absolute;
+            left: -130px;
+            top:65px;
+            flex-direction: column;
+            z-index: 1;
+          }
+         }
+         
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script>
+          var menu = false;
+
+          $(inicio)
+
+          //cuando la resolución horizontal supere el ancho máximo de la mediaquery debe ocultarse el menu
+          function inicio() {
+            $(window).on('resize', function() {
+              if (window.innerWidth >= 1000) {
+                $('nav').css({'left': '-130px'});
+                menu = false;
+              }
+            })
+          }
+
+          function aparecer() {
+            if (!menu) {
+              $('nav').animate({'left': '0px'}, 500);
+              menu=true
+            } else {
+              $('nav').animate({'left': '-130px'}, 500);
+              menu=false
+            }
+          }
+       </script>
+   </head>
+
+   <body>
+      <div id="contenedor">
+         <header>
+            <nav>
+               <a href="#">
+                     Inicio
+               </a>
+                <a href="#">
+                     Servicios
+               </a>
+                <a href="#">
+                     Audio
+               </a>
+                <a href="#">
+                     Video
+               </a>
+                <a href="#">
+                     Contacto
+               </a>
+                <a href="#">
+                     Herramientas
+               </a>
+            </nav>
+            <div id="rayitas">
+               <img src="img/rayitas.svg" onclick="aparecer()">
+            </div>
+         </header>  
+         <section></section>  
+      </div>
+   </body>
+ </html>

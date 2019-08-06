@@ -1,0 +1,9 @@
+.images, .texts {
+	display: block;
+	width: 100%;
+}
+
+header h1 {
+	width: 90%;
+	font-size: 30px;
+}

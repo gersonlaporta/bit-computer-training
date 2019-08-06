@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Esto es un comentario de HTML -->
+        <metacharset="UTF-8"/>
+        <meta name="description" content="Resumen del contenido">
+        <title>name of the page</title>
+        <!-- 
+            <meta http-equiv="refresh" content="5"/> 
+            <meta http-equiv='refresh' content='0; URL=http://www.google.es/'> 
+        -->
+        <meta name="author" content="Gerson Laporta">
+        <meta name="keywords" content="sport,football,soccer">
+        <link rel="icon" href="img/myicon.png" type="image/x-icon">
+        <meta name="robots" content="nofollow,noindex">
+        <!-- permite vaciar caché cada vez que se carga la página -->
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="pragma" content="no-cache">
+
+        <style>
+            
+            img {
+                width: 600px;
+                height: 300px;
+            }
+
+            body {
+                text-align: center;
+            }
+        
+        </style>
+
+        <script type="text/javascript">
+        
+            //crear un array con el nombre de todas las imagenes disponibles
+            var imagenes = new Array('img/punta_cana_1.jpg','img/punta_cana_2.jpg','img/punta_cana_3.jpg','img/punta_cana_4.jpg','img/punta_cana_5.jpg','img/punta_cana_6.jpg');
+
+            //variable que indica que imagen del array se muestra por defecto
+            var imagen = 0;
+
+            //activar los listeners de los botonoes anterior y siguiente imagen
+            window.onload=function() {
+                document.getElementById('anterior').
+                addEventListener('click', anterior)
+
+                document.getElementById('siguiente').
+                addEventListener('click', siguiente)
+
+                //añadir un temporizador para que las imagenes avancen cada 5 segundos
+                temporizador=setInterval ('siguiente()', 5000)   
+            }
+
+            //definir las funciones asociadas a los dos eventos (botones)
+            function anterior() {
+                //reiniciar el temporizador
+                clearInterval(temporizador);
+                temporizador=setInterval ('siguiente()', 5000) 
+
+                if (imagen==0) {
+                    imagen = imagenes.length-1
+                } else {
+                    imagen--
+                }
+                document.getElementById('imagen').src = imagenes[imagen]
+            }
+
+            function siguiente() {
+                //reiniciar el temporizador
+                clearInterval(temporizador);
+                temporizador=setInterval ('siguiente()', 5000) 
+
+                //elelmntos del array
+                ultimoIndice = imagenes.length-1
+
+                //mostrar imagen siguiente (si estamos en la última se visualizará la primera)
+
+                if (imagen==ultimoIndice) {
+                    imagen=0
+                } else {
+                    imagen++
+                }
+                document.getElementById('imagen').src = imagenes[imagen]
+            }
+
+
+        </script>
+
+    </head>
+
+<!-- Principio del HTML -->
+    <body>
+        
+        <img id="imagen" src="img/punta_cana_1.jpg"><br><br>
+        <input type="button" id="anterior" value="<<">
+        <input type="button" id="siguiente" value=">>">
+            
+    </body>
+<!-- Final del HTML -->
+
+</html>
+
+<!-- 
+Texto descriptivo del ejercicio.
+-->
